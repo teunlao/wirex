@@ -1,0 +1,26 @@
+{
+  "name": "@wirex/root",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "yarn workspace @wirex/core build",
+    "start": "yarn workspace @wirex/core watch",
+    "dev": "yarn run start & yarn workspace @playground/wirex start"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.13.10",
+    "tslib": "^2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "workspaces": [
+    "packages/*",
+    "playground/*"
+  ],
+  "packageManager": "yarn@4.7.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

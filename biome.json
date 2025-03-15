@@ -1,0 +1,89 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+    "vcs": {
+      "enabled": false,
+      "clientKind": "git",
+      "defaultBranch": "main",
+      "useIgnoreFile": true
+    },
+    "json": {
+      "parser": {
+        "allowComments": true
+      }
+    },
+    "files": {
+      "ignoreUnknown": false,
+      "ignore": []
+    },
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    },
+    "organizeImports": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true,
+      "ignore": ["**/dist/**", "**/*.spec.ts", "**/babel*.js"],
+      "rules": {
+        "complexity": {
+          "noForEach": "off",
+          "noStaticOnlyClass": "off",
+          "noBannedTypes": "off"
+        },
+        "style": {
+          "noNonNullAssertion": "off",
+          "noParameterAssign": "off",
+          "useNodejsImportProtocol": {
+            "level": "error",
+            "fix": "safe"
+          },
+          "noInferrableTypes": "info"
+        },
+        "correctness": {
+          "noUnknownProperty": "off",
+          "noChildrenProp": "off",
+          "useExhaustiveDependencies": "off",
+          "useImportExtensions": {
+            "fix": "safe",
+            "level": "error",
+            "options": {
+              "suggestedExtensions": {
+                "tsx": {
+                  "module": "js",
+                  "component": "js"
+                },
+                "ts": {
+                  "module": "js",
+                  "component": "js"
+                }
+              }
+            }
+          }
+        },
+        "performance": {
+          "noAccumulatingSpread": "off"
+        },
+        "security": {
+          "noDangerouslySetInnerHtml": "off",
+          "noDangerouslySetInnerHtmlWithChildren": "off"
+        },
+        "suspicious": {
+          "noShorthandPropertyOverrides": "off",
+          "noThenProperty": "off",
+          "noConfusingVoidType": "off",
+          "noImplicitAnyLet": "error",
+          "noExplicitAny": "off",
+          "useIsArray": "error"
+        },
+        "recommended": true
+      }
+    },
+    "javascript": {
+      "formatter": {
+        "lineWidth": 120,
+        "quoteStyle": "single"
+      }
+    }
+  }
+  

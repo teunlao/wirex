@@ -1,0 +1,15 @@
+{
+  "name": "@playground/wirex",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "run -T tsx watch src/index.ts",
+    "build": "run -T tsc"
+  },
+  "dependencies": {
+    "@wirex/core": "workspace:*"
+  }
+}
